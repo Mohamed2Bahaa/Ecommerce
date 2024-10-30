@@ -3,9 +3,9 @@ services:
     container_name: ms_pg_sql
     image: postgres
     environment:
-      POSTGRES_USER: mohamed
-      POSTGRES_PASSWORD: mohamed
-      PGDATA: /var/lib/postgresql/data
+      - POSTGRES_USER=mohamed
+      - POSTGRES_PASSWORD=mohamed123
+      - PGDATA=/var/lib/postgresql/data
     volumes:
       - postgres:/var/lib/postgresql/data
     ports:
@@ -53,8 +53,8 @@ services:
       ME_CONFIG_MONGODB_ADMINUSERNAME: mohamed
       ME_CONFIG_MONGODB_ADMINPASSWORD: mohamed
       ME_CONFIG_MONGODB_SERVER: mongodb
-     # ME_CONFIG_BASICAUTH_USERNAME: admin     # Add this line
-   #   ME_CONFIG_BASICAUTH_PASSWORD: pass123   # Add this line
+      ME_CONFIG_BASICAUTH_USERNAME: admin     # Add this line
+      ME_CONFIG_BASICAUTH_PASSWORD: pass123   # Add this line
     networks:
       - microservices-net
 
