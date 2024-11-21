@@ -14,6 +14,7 @@ services:
       - microservices-net
     restart: unless-stopped
 
+
   pgadmin:
     container_name: ms_pgadmin
     image: dpage/pgadmin4
@@ -53,8 +54,8 @@ services:
       ME_CONFIG_MONGODB_ADMINUSERNAME: mohamed
       ME_CONFIG_MONGODB_ADMINPASSWORD: mohamed
       ME_CONFIG_MONGODB_SERVER: mongodb
-      ME_CONFIG_BASICAUTH_USERNAME: admin     # Add this line
-      ME_CONFIG_BASICAUTH_PASSWORD: pass123   # Add this line
+#      ME_CONFIG_BASICAUTH_USERNAME: admin     # Add this line
+#      ME_CONFIG_BASICAUTH_PASSWORD: pass123   # Add this line
     networks:
       - microservices-net
 
