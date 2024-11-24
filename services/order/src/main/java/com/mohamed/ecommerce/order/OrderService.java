@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class OrderService {
+    private final OrderMapper mapper;
+    private final OrderRepository repository;
     private final CustomerClient customerClient;
     private final ProductClient productClient;
     public Integer createOrder(OrderRequest request) {
@@ -17,9 +19,10 @@ public class OrderService {
                         "with the provided ID ::"+ request.customerId()));
 
         //purchase the product
+        this.productClient.purchaseProducts(request.products());
 
         //persist order
-
+        var order = this.repository.save(mapper.toOrder(request));
         //persist order lines
 
         //start payment
