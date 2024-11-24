@@ -72,7 +72,7 @@ services:
         - microservices-net
 
   kafka:
-    image: confluentinc/cp_kafka:latest
+    image: confluentinc/cp-kafka:latest
     container_name: ms_kafka
     ports:
       - 9092:9092
@@ -109,4 +109,4 @@ volumes:
   postgres:
   pgadmin:
   mongo:
-
+##################################
