@@ -1,5 +1,6 @@
 package com.mohamed.ecommerce.order;
 
+import com.mohamed.ecommerce.product.PurchaseRequest;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -21,6 +22,6 @@ public record OrderRequest(
         @NotBlank(message = "Customer  should be present")
         String customerId,
         @NotEmpty(message = "You should at least purchase one product")
-        List<OrderRequest> products
+        List<PurchaseRequest> products
 ) {
 }
