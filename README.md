@@ -55,7 +55,7 @@ The project follows a **microservices architecture** where each service is indep
 ## **Setup Instructions**
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-repo/ecommerce-app.git
+   git clone https://github.com/Mohamed2Bahaa/Ecommerce.git
    cd ecommerce-app
    ```
 
